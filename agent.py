@@ -25,8 +25,8 @@ def get_session_history(session_id: str) -> BaseChatMessageHistory:
 
 def load_vectorstore():
     embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-    )
+    model_name="sentence-transformers/all-MiniLM-L6-v2"
+    )  
 
     if os.path.exists(CHROMA_PATH) and os.listdir(CHROMA_PATH):
         return Chroma(persist_directory=CHROMA_PATH, embedding_function=embeddings)

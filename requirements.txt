@@ -3,6 +3,10 @@ uvicorn
 langchain
 langchain-google-genai
 langchain-community
+langchain-groq
+langchain-text-splitters
+langchain-core
 chromadb
 pypdf
 python-dotenv
+sentence-transformers

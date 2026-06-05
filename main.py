@@ -1,11 +1,11 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
-from agent import load_vectorstore, build_chain
+from agent import load_documents, build_chain
 
 app = FastAPI()
-vectorstore = load_vectorstore()
-chain = build_chain(vectorstore)
+content = load_documents()
+chain = build_chain(content)
 
 class Message(BaseModel):
     message: str
